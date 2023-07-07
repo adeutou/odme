@@ -73,7 +73,9 @@ public class DynamicTree extends JPanel implements MouseListener {
     public File ssdFileVar;
     public File ssdFileCon;
     public File ssdFileFlag;
-    private int clickControl;
+
+    // for test we make private int to int
+    int clickControl;
     
     @SuppressWarnings("unchecked")
     public DynamicTree() {

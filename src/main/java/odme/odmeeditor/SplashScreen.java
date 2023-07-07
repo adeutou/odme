@@ -19,6 +19,23 @@ public class SplashScreen {
     private JProgressBar progressBar;
     private JLabel message;
     private int duration_sec;
+
+    // getters to help for private variable of this class in test case
+    public JFrame  getFrame() {
+        return frame;
+    }
+
+    public JLabel getImage() {
+        return image;
+    }
+    public JLabel getText() {
+        return text;
+    }
+
+    public JProgressBar getProgressBar() {
+        return progressBar;
+    }
+    // end Getters
     
     public SplashScreen(int duration) {
     	duration_sec = duration;

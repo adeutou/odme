@@ -24,6 +24,7 @@ import com.mxgraph.model.mxCell;
 import com.mxgraph.util.mxConstants;
 import com.mxgraph.util.mxUtils;
 
+import com.mxgraph.view.mxGraph;
 import odme.odmeeditor.DynamicTree;
 import odme.odmeeditor.Main;
 import odme.odmeeditor.ODMEEditor;
@@ -37,6 +38,7 @@ public class JtreeToGraphPrune {
 	
 	private static int cellCount = 0;
 	private static TreePath[] cellListForIconChange = new TreePath[100];
+
 	
 	public static void pruneNodeFromGraphPopup(Object pos) {
 		

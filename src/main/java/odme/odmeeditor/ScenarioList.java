@@ -190,7 +190,7 @@ public class ScenarioList extends JPanel {
     }
     
     @SuppressWarnings("unchecked")
-	private void deleteFromJson(String scenario) {
+	protected void deleteFromJson(String scenario) {
     	List<String[]> dataList = getJsonData();
 		
 		JSONArray ja = new JSONArray();
@@ -229,7 +229,7 @@ public class ScenarioList extends JPanel {
     		model.addRow(arr);
     }
     
-    private List<String[]> getJsonData() {
+    protected List<String[]> getJsonData() {
     	JSONParser jsonParser = new JSONParser();
     	List<String[]> dataList = new ArrayList<String[]>();
         
@@ -261,7 +261,7 @@ public class ScenarioList extends JPanel {
     	return dataList;
     }
     
-    private String[] parseObject(JSONObject obj) {
+    protected String[] parseObject(JSONObject obj) {
         JSONObject dataObject = (JSONObject) obj.get("scenario");
         
         String name = (String) dataObject.get("name");   

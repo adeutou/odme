@@ -24,6 +24,17 @@ public class Console extends JInternalFrame {
 	public static RSyntaxTextArea consoleText;
     private JPanel cp;
 
+    //the two following methods are to help for test
+    public void simulateConsoleKeyPress(KeyEvent event) {
+        consoleKeyPressedAction(event);
+    }
+
+    public void clearConsole() {
+        consoleText.setText(">>");
+    }
+    // end of the methods
+
+
     public Console() {
 
         cp = new JPanel(new BorderLayout());

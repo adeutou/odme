@@ -1,13 +1,6 @@
 package odme.odmeeditor;
 
-import javax.swing.JComboBox;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.JTable;
-import javax.swing.JTextField;
-import javax.swing.ListSelectionModel;
+import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 
 import odme.jtreetograph.JtreeToGraphDelete;
@@ -44,6 +37,12 @@ public class Variable extends JPanel {
     public static String selectedType;
     
     public static final String variableFieldRegEx = "[a-zA-Z_][a-zA-Z0-9_]*";
+
+    // getters to help for private variable of this class in test case
+    public DefaultTableModel getModel() {
+        return model;
+    }
+    // end Getters
     
 
     public Variable() {

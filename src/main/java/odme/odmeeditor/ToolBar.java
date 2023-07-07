@@ -116,31 +116,31 @@ public class ToolBar {
         });
     }
     
-    private void selector(){
+    protected void selector(){
     	ODMEEditor.nodeAddDetector = "";
     }
     
-    private void addEntity(){
+    protected void addEntity(){
     	ODMEEditor.nodeAddDetector = "entity";
     }
 
-    private void addAspect(){
+    protected void addAspect(){
     	ODMEEditor.nodeAddDetector = "aspect";
     }
     
-    private void addSpecialization(){
+    protected void addSpecialization(){
     	ODMEEditor.nodeAddDetector = "specialization";
     }
     
-    private void addMultiAspect(){
+    protected void addMultiAspect(){
     	ODMEEditor.nodeAddDetector = "multiaspect";
     }
     
-    private void deleteNode(){
+    protected void deleteNode(){
     	ODMEEditor.nodeAddDetector = "delete";
     }
     
-    private void saveGraph(){
+    protected void saveGraph(){
     	ODMEEditor.treePanel.saveTreeModel();
     	JtreeToGraphConvert.convertTreeToXML();
     	JtreeToGraphConvert.graphToXML();
@@ -149,7 +149,7 @@ public class ToolBar {
                 JOptionPane.INFORMATION_MESSAGE);
     }
     
-    private void undo(){
+    protected void undo(){
     	// System.out.println("undo: if there is any node without input/output edge then
         // undo tree will not work-have to do it");
         // undo actions for jtree
@@ -167,7 +167,7 @@ public class ToolBar {
         }
     }
     
-    private void redo(){
+    protected void redo(){
     	// redo actions for jtree
     	JtreeToGraphGeneral.redo();
         // redo actions for graph
@@ -183,11 +183,11 @@ public class ToolBar {
         }
     }
     
-    private void zoomIn(){
+    protected void zoomIn(){
     	JtreeToGraphGeneral.zoomIn();
     }
     
-    private void zoomOut(){
+    protected void zoomOut(){
     	JtreeToGraphGeneral.zoomOut();
     }
     

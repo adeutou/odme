@@ -196,7 +196,7 @@ public class MenuBar {
     }
     
     @SuppressWarnings("unchecked")
-	private void saveScenario() {
+	protected void saveScenario() {
     	JSONParser jsonParser = new JSONParser();
         
         try (FileReader reader = new FileReader(ODMEEditor.fileLocation + "/scenarios.json")){
@@ -257,7 +257,7 @@ public class MenuBar {
         } 
     }
     
-    private void createScenario(String ScenarioName) {
+    protected void createScenario(String ScenarioName) {
         ODMEEditor.currentScenario = ScenarioName;
         
         JtreeToGraphVariables.ssdFileGraph = new File(String.format("%s/%s/%sGraph.xml",
@@ -432,7 +432,7 @@ public class MenuBar {
         impProj.importProject();
     }
 
-    private void exportFunc() {
+    protected void exportFunc() {
     	ToolBar.validation();
         String fileName = ODMEEditor.projName; // don't know why not fetching the file name here
         JFileChooser fileChooser = new JFileChooser();
@@ -473,7 +473,7 @@ public class MenuBar {
         }
     }
 
-    private void manualFunc() {
+    protected void manualFunc() {
     	File pdfTemp = null;
         if (Desktop.isDesktopSupported()) {
             try {

@@ -47,6 +47,24 @@ public class NewProject extends JPanel {
     private JCheckBox defaultProjectLocationChecker;
     private JButton selectProjectLocation, create, cancel;
 
+    // getters to help for private variable of this class in test case
+    public JFrame  getFrame() {
+        return frame;
+    }
+    public JTextField  getProjectLocationField() {
+        return projectLocationField;
+    }
+    public JLabel getErrorLabelField(){return errorLabelField;}
+    public JTextField getNewProjectNameField() {
+        return newProjectNameField;
+    }
+    public JTextField getNewRootNameField() {
+        return newRootNameField;
+    }
+
+    public JButton getCreate(){return create;}
+    // end Getters
+
     public NewProject() {
         super(new BorderLayout());
         frame = new JFrame();
@@ -149,7 +167,7 @@ public class NewProject extends JPanel {
     }
 
 
-    private void addFunctions() {
+    protected void addFunctions() {
     	
         newProjectNameField.addKeyListener(new KeyListener() {
         	
@@ -240,7 +258,7 @@ public class NewProject extends JPanel {
         });
     }
     
-    private void selectLocation() {
+    protected void selectLocation() {
     	
     	JFileChooser fileChooser = new JFileChooser();
         fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
@@ -254,7 +272,7 @@ public class NewProject extends JPanel {
         }
     }
     
-    private void createFunc() {
+    protected void createFunc() {
     	
     	String newProjectName = newProjectNameField.getText();
         String newRootName = newRootNameField.getText();
