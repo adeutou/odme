@@ -32,8 +32,10 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
-    - run: mvn --batch-mode --update-snapshots verify
-    - run: mkdir staging && cp target/*.jar staging
+    - name: Verify with Maven
+      run: mvn --batch-mode --update-snapshots verify
+    - name: Create Staging Directory and Copy JAR to Staging
+      run: mkdir staging && cp target/*.jar staging
     - uses: actions/upload-artifact@v3
       with:
         name: Package
@@ -49,9 +51,10 @@ jobs:
         with:
           name: Package
       - name: Archive app content
-        uses: thedoctor0/zip-release@master
-        with:
-          filename: package.zip
+        #uses: thedoctor0/zip-release@master
+        #with:
+          #filename: package.zip
+        run: zip -r package.zip staging/
       - name: create Github release
         id: create-new-release
         uses: actions/create-release@v1
