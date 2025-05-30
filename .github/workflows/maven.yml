@@ -55,7 +55,6 @@ jobs:
         uses: thedoctor0/zip-release@master
         with:
           filename: package.zip
-        #run: zip -r package.zip staging/
       - name: create Github release
         id: create-new-release
         uses: actions/create-release@v1
